@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <button class = "toggle">toggle</button>
+        <div class = "box" style="width : 100px; height: 100px; background: red;"></div>0 -->
+
+        <p>클로저를 사용한 counting</p>
+        <button id = "increase">+</button>
+        <p id = "count">0</p>
+
+        <script>
+            // var box = document.querySelector('.box');
+            // var toggleBtn = document.querySelector('.toggle');
+
+            // var toggle = (function() {
+            //     var isShow = false;
+
+            //     return function() {
+            //         box.style.display = isShow ? 'block':'none';
+            //         isShow = !isShow;
+            //     };
+            // })();
+
+            // toggleBtn.onclick = toggle;
+
+            var count = document.querySelector('#count');
+            var increase = document.querySelector('#increase');
+
+            var toggle = (function(){
+                var counter = 0;
+
+                return function(){
+                    // return ++counter;
+                    count.innerHTML = ++counter;
+                };
+            })();
+
+            // increase.onclick = function(){
+            //     count.innerHTML = toggle();
+            // }
+            increase.onclick = toggle;
+            
+        </script>
+    </body>
+</html>

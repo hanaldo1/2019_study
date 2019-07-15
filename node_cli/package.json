@@ -1,0 +1,19 @@
+{
+  "name": "node_cli",
+  "version": "1.0.0",
+  "description": "first nodejs cli program",
+  "main": "./lib/app.js",
+  "bin":{
+    "browser":"./bin/browser.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jiw021538@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "open": "^6.3.0",
+    "progress": "^2.0.3"
+  }
+}

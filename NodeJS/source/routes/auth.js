@@ -17,22 +17,25 @@ router.get('/login', function(request, response){
     response.send(html);
 })
 
-router.post('/login_process', function(request, response){
-    var post = request.body;
-    var email = post.email;
-    var password = post.password;
+// router.post('/login_process', function(request, response){
+//     var post = request.body;
+//     var email = post.email;
+//     var password = post.password;
 
-    if(email === 'aaa@email.com' && password === '1111'){
-        request.session.isLogin = true
-        request.session.nickname = 'aaa'
-        request.session.save(function(err){
-            response.redirect('/');
-        })
-    }
-    else{
-        response.send('who?');
-    }
-})
+//     if(email === 'aaa@email.com' && password === '1111'){
+//         request.session.isLogin = true
+//         request.session.nickname = 'aaa'
+//         request.session.save(function(err){
+//             response.redirect('/');
+//         })
+//     }
+//     else{
+//         response.send('who?');
+//     }
+// })
+
+// login process passport
+
 
 router.get('/logout', function(request, response){
     request.session.destroy(function(err){

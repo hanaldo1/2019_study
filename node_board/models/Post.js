@@ -23,12 +23,12 @@ postSchema.virtual("createdTime")
     return getTime(this.createdAt);
 });
 
-postSchema.virtual("updateDate")
+postSchema.virtual("updatedDate")
 .get(function(){
     return getDate(this.updatedAt);
 });
 
-postSchema.virtual("updateTime")
+postSchema.virtual("updatedTime")
 .get(function(){
     return getTime(this.updatedAt);
 });
